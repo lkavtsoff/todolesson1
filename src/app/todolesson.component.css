@@ -1,0 +1,4 @@
+:host .wrap {
+    color: #555;
+    height: calc(100vh - 40px);
+}

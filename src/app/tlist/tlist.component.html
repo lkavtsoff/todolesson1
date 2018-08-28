@@ -1,0 +1,21 @@
+<section>
+  <h1>Список покупок שוק</h1>
+
+  <div class="new_item">
+    <aside>
+      <input [(ngModel)]="name" type="text" placeholder="Item name">
+      <button (click)="addProduct(name, price)">
+        <b>+</b> Add to list
+      </button>
+    </aside>
+    <aside>
+      <textarea [(ngModel)]="price" placeholder="Specify product price"></textarea>
+    </aside>
+  </div>
+  
+  <ul>
+      <li [(class.lt)]="product.status" *ngFor="let product of products">
+        <a routerLink="product/{{product.id}}">{{product.name}}</a>
+      </li>
+  </ul>
+</section>
